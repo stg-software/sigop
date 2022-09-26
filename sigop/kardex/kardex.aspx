@@ -11,24 +11,25 @@
                 <li class="list-group-item border-0"><a class="btn btn-primary" id="porCurp" href="#">CURP</a></li>
             </ul>
         </nav>
-        <div id="kcontent">
-            <div class="ksearch">
+        <div id="kcontent relative-div">
+            <div class="ksearch form-div">
                 <asp:Label ID="lblnom" runat="server" Text="Label" placeholder="Nombre">Nombre:</asp:Label>
-                <asp:TextBox ID="txtNom" runat="server">place</asp:TextBox>
+                <asp:TextBox ID="txtNom" CssClass="txtBox" runat="server" placeholder="Nombre"></asp:TextBox>
                 <asp:Label ID="lblApPat" runat="server" Text="Label" placeholder="Apellido Paterno">Apellido Paterno:</asp:Label>
-                <asp:TextBox ID="txtApPat" runat="server">place</asp:TextBox>
+                <asp:TextBox ID="txtApPat" CssClass="txtBox" runat="server" placeholder="Apellido Paterno"></asp:TextBox>
                 <asp:Label ID="lblApMat" runat="server" Text="Label">Apellido Materno:</asp:Label>
-                <asp:TextBox ID="txtApMat" runat="server" placeholder="Apellido Materno"></asp:TextBox>
-                <asp:Button ID="bntBuscarNom" CssClass="kBuscarBtn" runat="server" Text="Buscar" />
+                <asp:TextBox ID="txtApMat" CssClass="txtBox" runat="server" placeholder="Apellido Materno"></asp:TextBox>
+                <asp:Button ID="bntBuscarNom" CssClass="kBuscarBtn btn" runat="server" Text="Buscar" />
             </div>
-            <div class="ksearch">
+            <div class="ksearch form-div">
                 <asp:Label ID="lblCurp" runat="server" Text="Label">Nombre:</asp:Label>
-                <asp:TextBox ID="txtCurp" runat="server" placeholder="CURP"></asp:TextBox>
+                <asp:TextBox ID="txtCurp" CssClass="txtBox" runat="server" placeholder="CURP"></asp:TextBox>
+                <asp:Button ID="btnBuscarCurp" CssClass="kBuscarBtn btn" runat="server" Text="Buscar" />
+            </div>
+            <div id="gridDatos">
                 
-                <asp:Button ID="btnBuscarCurp" CssClass="kBuscarBtn" runat="server" Text="Buscar" />
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
-</asp:Content>
+    <script src="kscript.js"></script></asp:Content>
 

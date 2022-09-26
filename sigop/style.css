@@ -48,6 +48,20 @@
 }
 
 .kBuscarBtn{
-    grid-column: span 2
+    grid-column: span 2;
+}
+
+.btn{
+    border: none;
+    border-radius: 5px;
+    background: #799F62;
+    color:white;
+}
+
+.form-div {
+    border: 1px solid #8693BF;
+    border-radius:5px;
+    padding:1rem;
+    padding-right:1.5rem;
 }
 

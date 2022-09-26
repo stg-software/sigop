@@ -14,15 +14,15 @@ let porCurp = document.getElementById("porCurp");
 let kcontent = document.getElementById("kcontent");
 let ksearch = document.querySelectorAll(".ksearch");
 
-ksearch[0].style.visibility = "collapse";
-ksearch[1].style.visibility = "collapse";
+ksearch[0].style.display = "none";
+ksearch[1].style.display = "none";
 
 porNombre.addEventListener("click", (e) => {
-    ksearch[0].style.visibility = "visible";
-    ksearch[1].style.visibility = "collapse";
+    ksearch[0].style.display = "grid";
+    ksearch[1].style.display = "none";
 });
 
 porCurp.addEventListener("click", (e) => {
-    ksearch[0].style.visibility = "collapse";
-    ksearch[1].style.visibility = "visible";
+    ksearch[0].style.display = "none";
+    ksearch[1].style.display = "grid";
 });
