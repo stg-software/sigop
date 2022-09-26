@@ -1,0 +1,53 @@
+﻿:root {
+    --primary: #E8DAF1;
+    --secondary: #799F62;
+}
+
+
+
+.dropdown ul{
+    background-color: #CED8F2;
+    
+}
+
+.img-header{
+    height: 1.5rem;
+}
+
+.header-top {
+    height: 4rem;
+    background-color: #F3FBFD;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-top h1{
+    font-size:2rem;
+}
+
+#div-main-nav {
+    /*width: 350px;*/
+    height: 100vh;
+    background-color: #F3FBFD;
+}
+
+.main-container{
+    display:grid;
+    grid-template-columns: 350px 1fr;
+    grid-gap:5px;
+  
+}
+
+.ksearch {
+    width:98%;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-gap: .5rem;
+    align-items:center;
+}
+
+.kBuscarBtn{
+    grid-column: span 2
+}
+

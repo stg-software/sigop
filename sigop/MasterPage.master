@@ -1,0 +1,121 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet" />
+    <title>SIGOP</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header class="">
+            <div class="px-3 header-top m-0 p-0">
+                <h1>Sistema Integral de Gestion Pilicial</h1>
+                <img class="img-header" src="img/logo.png" />
+            </div>
+        </header>
+        
+        <div class="main-container">
+            <div>
+            <nav class="navbar m-0 p-0" id="main-nav">
+                <div class="px-4 pt-2" id="div-main-nav">
+                    <div class="nav-side-bar" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5>Navegacion</h5>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../Default.aspx">INICIO</a>
+                                </li>
+
+                                <!-- INICIA DROPDOWN GESTION-->
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    GESTION
+                                    </a>
+                                    <ul class="dropdown-menu border-0">
+                                    <li><a class="dropdown-item" href="#">Usuarios</a></li>
+                                    <li><a class="dropdown-item" href="/kardex/kardex.aspx">Kardex policial</a></li>
+                                    </ul>
+                                </li>
+                                <!-- FINALIZA DROPDOWN -->
+
+                                <!-- INICIA DROPDOWN CTRL MOV Y EQUIPO-->
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    CONTROL DE MOVILIARIO Y EQUIPO
+                                    </a>
+                                    <ul class="dropdown-menu border-0">
+                                    <li><a class="dropdown-item" href="#">Inventario</a></li>
+                                    <li><a class="dropdown-item" href="#">Mantenimiento vehicular</a></li>
+                                    <li><a class="dropdown-item" href="#">Armamento, rquipo tactico <br> y municiones</a></li>
+                                    </ul>
+                                </li>
+                                <!-- FINALIZA DROPDOWN -->
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">GESTION DOCUMENTAL</a>
+                                </li>
+
+                                <!-- INICIA DROPDOWN OPERACION PILICIAL-->
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    OPERACION POLICIAL
+                                    </a>
+                                    <ul class="dropdown-menu border-0">
+                                    <li><a class="dropdown-item" href="#">Registro de multas <br> de transito</a></li>
+                                    <li><a class="dropdown-item" href="#">Registro de incidencias <br> y actividades de proximidad</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Registro de aseguramientos</a></li>
+                                    <li><a class="dropdown-item" href="#">Registro de empresas de <br> seguridad privada</a></li>
+                                    </ul>
+                                </li>
+                                <!-- FINALIZA DROPDOWN -->
+
+                                <!-- INICIA DROPDOWN CONTROL DIRECTIVO-->
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    CONTROL DIRECTIVO
+                                    </a>
+                                    <ul class="dropdown-menu border-0">
+                                    <li><a class="dropdown-item" href="#">Tablero de resultados</a></li>
+                                    <li><a class="dropdown-item" href="#">Cumplimiento de metas <br> y objetivos</a></li>
+                                    </ul>
+                                </li>
+                                <!-- FINALIZA DROPDOWN -->
+                            </ul> 
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <%--ASP CONTENTPLACEHOLDER--%>
+        <div class="asp-container">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+     
+            </asp:ContentPlaceHolder>
+        </div>
+        </div>
+        
+        <div class="footer">
+            
+        </div>
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    </form>
+</body>
+</html>
