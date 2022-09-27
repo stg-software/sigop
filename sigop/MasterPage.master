@@ -57,7 +57,7 @@
                                     CONTROL DE MOVILIARIO Y EQUIPO
                                     </a>
                                     <ul class="dropdown-menu border-0">
-                                    <li><a class="dropdown-item" href="#">Inventario</a></li>
+                                    <li><a class="dropdown-item" href="/inventario/MasterPageInventario.master">Inventario</a></li>
                                     <li><a class="dropdown-item" href="#">Mantenimiento vehicular</a></li>
                                     <li><a class="dropdown-item" href="#">Armamento, rquipo tactico <br> y municiones</a></li>
                                     </ul>

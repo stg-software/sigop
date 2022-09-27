@@ -4,6 +4,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+
     <div class="container-fluid p-1" id="kardex">
         <nav class="">
             <ul class="list-group d-flex flex-row jusify-conten-start">
@@ -55,5 +56,7 @@
             </div>
         </div>
     </div>
-    <script src="kscript.js"></script></asp:Content>
+    <script src="kscript.js"></script>
+
+</asp:Content>
 
