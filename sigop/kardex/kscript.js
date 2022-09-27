@@ -11,18 +11,28 @@
 
 let porNombre = document.getElementById("porNombre");
 let porCurp = document.getElementById("porCurp");
+let kinsert = document.getElementById("kinsert");
 let kcontent = document.getElementById("kcontent");
-let ksearch = document.querySelectorAll(".ksearch");
+let kardexDiv = document.querySelectorAll(".ksearch");
 
-ksearch[0].style.display = "none";
-ksearch[1].style.display = "none";
+kardexDiv[0].style.display = "grid";
+kardexDiv[1].style.display = "none";
+kardexDiv[2].style.display = "none";
 
-porNombre.addEventListener("click", (e) => {
-    ksearch[0].style.display = "grid";
-    ksearch[1].style.display = "none";
+porNombre.addEventListener("click", () => {
+    kardexDiv[0].style.display = "grid";
+    kardexDiv[1].style.display = "none";
+    kardexDiv[2].style.display = "none";
 });
 
-porCurp.addEventListener("click", (e) => {
-    ksearch[0].style.display = "none";
-    ksearch[1].style.display = "grid";
+porCurp.addEventListener("click", () => {
+    kardexDiv[0].style.display = "none";
+    kardexDiv[1].style.display = "grid";
+    kardexDiv[2].style.display = "none";
 });
+
+kinsert.addEventListener("click", () => {
+    kardexDiv[0].style.display = "none";
+    kardexDiv[1].style.display = "none";
+    kardexDiv[2].style.display = "grid";
+})
