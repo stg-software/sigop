@@ -44,7 +44,7 @@
                                     GESTION
                                     </a>
                                     <ul class="dropdown-menu border-0">
-                                    <li><a class="dropdown-item" href="#">Usuarios</a></li>
+                                    <li><a class="dropdown-item" href="/usuarios/wfCatUsuarios.aspx">Usuarios</a></li>
                                     <li><a class="dropdown-item" href="/kardex/kardex.aspx">Kardex policial</a></li>
                                     </ul>
                                 </li>
