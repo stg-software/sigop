@@ -1,0 +1,29 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="MasterPageKardex.master.cs" Inherits="kardex_MasterPageKardex" %>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <link href="/css/kardex.css" rel="stylesheet" />
+   <div class="form-div d-flex mb-2 mx-1">
+        <div class="form-check mx-1" id="byNameDiv">
+          
+        </div>
+        <div class="form-check mx-1" id="byCurpDiv">
+         
+        </div>
+
+        <div class="form-check mx-1" id="insertDiv">
+         
+        </div>
+
+    </div>
+    
+    
+    <div class="mx-1">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+        </asp:ContentPlaceHolder>
+    </div>
+
+    <script src="kscript.js"></script>
+
+</asp:Content>
+

@@ -39,17 +39,7 @@
   
 }
 
-.ksearch {
-    width:98%;
-    display: grid;
-    grid-template-columns: 35% 65%;
-    grid-gap: .5rem;
-    align-items:center;
-}
 
-.kBuscarBtn{
-    grid-column: span 2;
-}
 
 .btn{
     border: none;
@@ -61,7 +51,8 @@
 .form-div {
     border: 1px solid #8693BF;
     border-radius:5px;
-    padding:1rem;
-    padding-right:1.5rem;
+    padding:.5rem;
+    margin:.5rem;
+    
 }
 
