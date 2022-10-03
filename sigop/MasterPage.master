@@ -8,7 +8,8 @@
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet" />
-    <title>SIGOP</title>
+
+    <title><%=Titulo%></title>
     <asp:ContentPlaceHolder id="head" runat="server">
     
     </asp:ContentPlaceHolder>
@@ -17,8 +18,8 @@
     <form id="form1" runat="server">
         <header class="">
             <div class="px-3 header-top m-0 p-0">
-                <h1>Sistema Integral de Gestion Pilicial</h1>
-                <img class="img-header" src="img/logo.png" />
+                <h1><%=Titulo%></h1>
+                <img class="img-header" src="/img/logo.png" />
             </div>
         </header>
         
@@ -44,7 +45,7 @@
                                     GESTION
                                     </a>
                                     <ul class="dropdown-menu border-0">
-                                    <li><a class="dropdown-item" href="#">Usuarios</a></li>
+                                    <li><a class="dropdown-item" href="/usuarios/wfCatUsuarios.aspx">Usuarios</a></li>
                                     <li><a class="dropdown-item" href="/kardex/kardex.aspx">Kardex policial</a></li>
                                     </ul>
                                 </li>

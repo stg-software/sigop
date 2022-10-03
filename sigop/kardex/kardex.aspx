@@ -24,7 +24,7 @@
                 <asp:Button ID="bntBuscarNom" CssClass="kBuscarBtn btn" runat="server" Text="Buscar" />
             </div>
             <div class="ksearch form-div">
-                <asp:Label ID="lblCurp" runat="server" Text="Label">Nombre:</asp:Label>
+                <asp:Label ID="lblCurp" runat="server" Text="Label">CURP:</asp:Label>
                 <asp:TextBox ID="txtCurp" CssClass="txtBox" runat="server" placeholder="CURP"></asp:TextBox>
                 <asp:Button ID="btnBuscarCurp" CssClass="kBuscarBtn btn" runat="server" Text="Buscar" />
             </div>

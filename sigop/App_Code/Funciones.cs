@@ -84,3 +84,15 @@ public class Funciones
     }
 
 }
+
+
+public class WebService
+    {
+    public string Url { get; private set; }
+    public string Method { get; private set; }
+    public WebService(string baseUrl)
+    {
+        Url = baseUrl;
+        Method = String.Empty;
+    }
+}
