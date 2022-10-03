@@ -12,9 +12,7 @@
       <s:complexType name="Usuarios">
         <s:sequence>
           <s:element minOccurs="0" maxOccurs="1" name="UsuarioId" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="NombreCompletoUsuario" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="Paterno" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="Materno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmpeladoId" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="Contraseña" type="s:string" />
           <s:element minOccurs="1" maxOccurs="1" name="Estatus" type="s:boolean" />
@@ -271,6 +269,143 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="KardexAlta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="p" type="tns:kardex" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="kardex">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Id" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Paterno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Materno" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaNacimiento" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="RFC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CURP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SEXO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="correoins" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="correoper" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="estadocivil" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="celuarp" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="celularof" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="tiposangre" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="licenciatipo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="licencianumero" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="licenciafin" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="dependientes" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="nss" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="fechaingreso" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="noempleado" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="claveelector" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="estatus" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="beneficiario" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="KardexAltaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="KardexAltaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KardexActualiza">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="p" type="tns:kardex" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KardexActualizaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="KardexActualizaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KardexAdscripcionAlta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="p" type="tns:kardexadscripcion" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="kardexadscripcion">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AdscripcionId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="KardexId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Adscripcion" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FuncionesId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Instalaciones" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaAsignacion" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaInicioCargo" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="OficioAsignacion" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Estatus" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="area" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="KardexAdscripcionAltaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="KardexAdscripcionAltaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KardexAdscripcionUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="p" type="tns:kardexadscripcion" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KardexAdscripcionUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="KardexAdscripcionUpdateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KardexControlAlta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="p" type="tns:KardexControl" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="KardexControl">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ControlId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="KardexId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Evaluacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Estatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InstanciaEvalua" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FechaEvaluacion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NoCertificado" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="KardexControlAltaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="KardexControlAltaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KardexControlUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="p" type="tns:KardexControl" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KardexControlUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="KardexControlUpdateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="UsuariosAltaSoapIn">
@@ -357,6 +492,42 @@
   <wsdl:message name="BusquedaNombreSoapOut">
     <wsdl:part name="parameters" element="tns:BusquedaNombreResponse" />
   </wsdl:message>
+  <wsdl:message name="KardexAltaSoapIn">
+    <wsdl:part name="parameters" element="tns:KardexAlta" />
+  </wsdl:message>
+  <wsdl:message name="KardexAltaSoapOut">
+    <wsdl:part name="parameters" element="tns:KardexAltaResponse" />
+  </wsdl:message>
+  <wsdl:message name="KardexActualizaSoapIn">
+    <wsdl:part name="parameters" element="tns:KardexActualiza" />
+  </wsdl:message>
+  <wsdl:message name="KardexActualizaSoapOut">
+    <wsdl:part name="parameters" element="tns:KardexActualizaResponse" />
+  </wsdl:message>
+  <wsdl:message name="KardexAdscripcionAltaSoapIn">
+    <wsdl:part name="parameters" element="tns:KardexAdscripcionAlta" />
+  </wsdl:message>
+  <wsdl:message name="KardexAdscripcionAltaSoapOut">
+    <wsdl:part name="parameters" element="tns:KardexAdscripcionAltaResponse" />
+  </wsdl:message>
+  <wsdl:message name="KardexAdscripcionUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:KardexAdscripcionUpdate" />
+  </wsdl:message>
+  <wsdl:message name="KardexAdscripcionUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:KardexAdscripcionUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="KardexControlAltaSoapIn">
+    <wsdl:part name="parameters" element="tns:KardexControlAlta" />
+  </wsdl:message>
+  <wsdl:message name="KardexControlAltaSoapOut">
+    <wsdl:part name="parameters" element="tns:KardexControlAltaResponse" />
+  </wsdl:message>
+  <wsdl:message name="KardexControlUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:KardexControlUpdate" />
+  </wsdl:message>
+  <wsdl:message name="KardexControlUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:KardexControlUpdateResponse" />
+  </wsdl:message>
   <wsdl:portType name="wsSigobSoap">
     <wsdl:operation name="UsuariosAlta">
       <wsdl:input message="tns:UsuariosAltaSoapIn" />
@@ -413,6 +584,30 @@
     <wsdl:operation name="BusquedaNombre">
       <wsdl:input message="tns:BusquedaNombreSoapIn" />
       <wsdl:output message="tns:BusquedaNombreSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="KardexAlta">
+      <wsdl:input message="tns:KardexAltaSoapIn" />
+      <wsdl:output message="tns:KardexAltaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="KardexActualiza">
+      <wsdl:input message="tns:KardexActualizaSoapIn" />
+      <wsdl:output message="tns:KardexActualizaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="KardexAdscripcionAlta">
+      <wsdl:input message="tns:KardexAdscripcionAltaSoapIn" />
+      <wsdl:output message="tns:KardexAdscripcionAltaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="KardexAdscripcionUpdate">
+      <wsdl:input message="tns:KardexAdscripcionUpdateSoapIn" />
+      <wsdl:output message="tns:KardexAdscripcionUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="KardexControlAlta">
+      <wsdl:input message="tns:KardexControlAltaSoapIn" />
+      <wsdl:output message="tns:KardexControlAltaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="KardexControlUpdate">
+      <wsdl:input message="tns:KardexControlUpdateSoapIn" />
+      <wsdl:output message="tns:KardexControlUpdateSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="wsSigobSoap" type="tns:wsSigobSoap">
@@ -543,6 +738,60 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="KardexAlta">
+      <soap:operation soapAction="http://tempuri.org/KardexAlta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KardexActualiza">
+      <soap:operation soapAction="http://tempuri.org/KardexActualiza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KardexAdscripcionAlta">
+      <soap:operation soapAction="http://tempuri.org/KardexAdscripcionAlta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KardexAdscripcionUpdate">
+      <soap:operation soapAction="http://tempuri.org/KardexAdscripcionUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KardexControlAlta">
+      <soap:operation soapAction="http://tempuri.org/KardexControlAlta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KardexControlUpdate">
+      <soap:operation soapAction="http://tempuri.org/KardexControlUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="wsSigobSoap12" type="tns:wsSigobSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -665,6 +914,60 @@
     </wsdl:operation>
     <wsdl:operation name="BusquedaNombre">
       <soap12:operation soapAction="http://tempuri.org/BusquedaNombre" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KardexAlta">
+      <soap12:operation soapAction="http://tempuri.org/KardexAlta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KardexActualiza">
+      <soap12:operation soapAction="http://tempuri.org/KardexActualiza" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KardexAdscripcionAlta">
+      <soap12:operation soapAction="http://tempuri.org/KardexAdscripcionAlta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KardexAdscripcionUpdate">
+      <soap12:operation soapAction="http://tempuri.org/KardexAdscripcionUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KardexControlAlta">
+      <soap12:operation soapAction="http://tempuri.org/KardexControlAlta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KardexControlUpdate">
+      <soap12:operation soapAction="http://tempuri.org/KardexControlUpdate" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

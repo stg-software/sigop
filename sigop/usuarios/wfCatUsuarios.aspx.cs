@@ -14,18 +14,18 @@ public partial class usuarios_wfCatUsuarios : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
-            HttpCookie cookiep = Request.Cookies["appTienda"];
-            if (cookiep != null)
-            {
+            //HttpCookie cookiep = Request.Cookies["appTienda"];
+            //if (cookiep != null)
+            //{
                 DataTable resultados;
                 resultados = WS.UsuariosGrid();
                 GridView1.DataSource = resultados;
                 GridView1.DataBind();
-            }
-            else
-            {
-                Response.Redirect("../login/wfLogin.aspx");
-            }
+            //}
+            //else
+            //{
+            //    Response.Redirect("../login/wfLogin.aspx");
+            //}
 
         }
     }
